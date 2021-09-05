@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++11 -Wall -pedantic-errors -Werror -g CMakeFiles/lab1.dir/t1.cpp.o -o lab1 

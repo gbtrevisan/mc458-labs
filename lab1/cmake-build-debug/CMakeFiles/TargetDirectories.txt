@@ -1,0 +1,3 @@
+/home/gtrevisan/Documents/repos/mc458-labs/lab1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/gtrevisan/Documents/repos/mc458-labs/lab1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/gtrevisan/Documents/repos/mc458-labs/lab1/cmake-build-debug/CMakeFiles/lab1.dir
