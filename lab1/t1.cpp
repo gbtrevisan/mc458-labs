@@ -27,7 +27,7 @@ int main() {
     cout << getCost(items, requisitions, calculateMoveToFrontCost) << "\n";
     cout << getCost(items, requisitions, calculateTranspositionCost) << "\n";
     cout << getFrequencyCountCost(items, requisitions) << "\n";
-    cout << getBitCost(items, requisitions, bitValues);
+    cout << getBitCost(items, requisitions, bitValues) << "\n";
 
     return 0;
 }
@@ -80,7 +80,7 @@ unsigned int calculateTranspositionCost(vector<int>& items, int request) {
             if (i != 0) {
                 int temp = items[i];
                 items.erase(items.begin() + i);
-                items.emplace(items.cbegin() + i - 1, temp);
+                items.emplace(items.begin() + i - 1, temp);
             }
         }
     }
@@ -99,7 +99,7 @@ void sortByDecreasingFrequency(vector<pair<int, int>>& v, unsigned int index) {
 
     for (unsigned int i = 0; i < v.size() && !sorted; i++) {
         if (p.second >= v[i].second) {
-            v.emplace(v.cbegin() + i, p);
+            v.emplace(v.begin() + i, p);
             sorted = true;
         }
     }
@@ -157,7 +157,7 @@ unsigned int getBitCost(const vector<int>& items, const vector<int>& requisition
                     v[i].second = 0;
                     pair<int, int> p = v[i];
                     v.erase(v.begin() + i);
-                    v.emplace(v.cbegin(), p);
+                    v.emplace(v.begin(), p);
                 } else {
                     v[i].second = 1;
                 }
