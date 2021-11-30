@@ -1,0 +1,12 @@
+r(i, U) - o numero minimo de moedas dentre as i moedas que devem ser utilizadas para alcancar o valor U
+e(i, U) - o excesso no valor que a solucao r(i, U) teve
+v(i) - valor da moeda i
+
+r(i, U):
+
+0 se U = 0
+r(i, U) = 1 e e(i, U) = v(i) - U, se i = 1 e v(i) >= U
+r(i, U) = teto(U / v(i)) e e(i, U) = r(i, U) * v(i) - U, se i = 1 e v(i) < U
+min{ r(i, U - v(i)) + 1, r(i - 1, U) }, se e(i, U - v(i)) = e(i - 1, U)
+r(i, U - v(i)) + 1, se e(i, U - v(i)) < e(i - 1, U)
+r(i - 1, U), se e(i, U - v(i)) >= e(i - 1, U)
